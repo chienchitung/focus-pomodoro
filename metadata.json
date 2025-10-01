@@ -1,0 +1,5 @@
+{
+  "name": "Focus Pomodoro",
+  "description": "A minimalist Pomodoro timer integrated with Gemini to boost your productivity. Features customizable timers, a simple task list with AI-powered task breakdown, and motivational quotes.",
+  "requestFramePermissions": []
+}

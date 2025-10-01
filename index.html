@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus Pomodoro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        /* Default to pomodoro theme */
+        --bg-primary: #d95550;
+        --bg-secondary: #df6b67;
+        --color-accent: #ffffff;
+        --color-light: #ffffff;
+        --text-on-accent: #d95550;
+      }
+      .theme-pomodoro {
+        --bg-primary: #d95550;
+        --bg-secondary: #df6b67;
+        --color-accent: #ffffff;
+        --color-light: #ffffff;
+        --text-on-accent: #d95550;
+      }
+      .theme-shortBreak {
+        --bg-primary: #4c9196;
+        --bg-secondary: #5da0a5;
+        --color-accent: #ffffff;
+        --color-light: #ffffff;
+        --text-on-accent: #4c9196;
+      }
+      .theme-longBreak {
+        --bg-primary: #4d7fa2;
+        --bg-secondary: #628eaf;
+        --color-accent: #ffffff;
+        --color-light: #ffffff;
+        --text-on-accent: #4d7fa2;
+      }
+      body {
+        transition: background-color 0.5s ease;
+        background-color: var(--bg-primary);
+        color: var(--color-light);
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary': 'var(--bg-primary)',
+              'secondary': 'var(--bg-secondary)',
+              'accent': 'var(--color-accent)',
+              'light': 'var(--color-light)',
+              'text-on-accent': 'var(--text-on-accent)',
+            },
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.21.0",
+    "uuid": "https://aistudiocdn.com/uuid@^13.0.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
